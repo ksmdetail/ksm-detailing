@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KSM Detailing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    nav {
+      background: #333;
+      padding: 10px;
+      color: white;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .cars-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .car-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('cars')">Cars</a>
+</nav>
+
+<div id="home" class="page active">
+  <h1>Hello 👋</h1>
+  <p>Welcome to my website.</p>
+</div>
+
+<div id="cars" class="page">
+  <h1>Cars</h1>
+
+  <div class="cars-container">
+
+    <!-- Car 1 -->
+    <div class="card">
+      <h3>Car 1</h3>
+      <img id="car1" class="car-img"
+        src="IMG_4965.JPG"
+      >
+      <button onclick="toggleCar('car1')">Toggle Clean/Dirty</button>
+    </div>
+
+    <!-- Car 2 -->
+    <div class="card">
+      <h3>Car 2</h3>
+      <img id="car2" class="car-img"
+        src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8"
+      >
+      <button onclick="toggleCar('car2')">Toggle Clean/Dirty</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+
+  function toggleCar(id) {
+    const img = document.getElementById(id);
+
+    if (img.dataset.state === "dirty") {
+      img.src = "https://images.unsplash.com/photo-1503376780353-7e6692767b70";
+      img.dataset.state = "clean";
+    } else {
+      img.src = "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c9";
+      img.dataset.state = "dirty";
+    }
+  }
+</script>
+
+</body>
+</html>
