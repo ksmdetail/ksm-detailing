@@ -1,186 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KSM Detailing</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f5f5f5;
-}
-
-/* NAVBAR */
-nav {
-  background: #111;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-/* HERO */
-.hero {
-  background: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c9') center/cover;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* SERVICES */
-.services {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  flex: 1;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* PORTFOLIO */
-.portfolio {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.portfolio img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.portfolio-item {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* CONTACT */
-.contact {
-  text-align: center;
-}
-
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <div><strong>KSM Detail</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Work</a>
-    <a href="#contact">Contact</a>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">30 days left</p>
   </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Professional Car Detailing</h1>
-  <p>Bringing your car back to life</p>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <img src="maximo.jpeg">
-  <p>
-    I specialize in high-quality car detailing, transforming dirty vehicles into showroom condition.
-    With attention to detail and professional tools, I make every car look its best.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Exterior Wash</h3>
-      <p>Deep cleaning and shine restoration.</p>
-    </div>
-    <div class="card">
-      <h3>Interior Detail</h3>
-      <p>Full vacuum and interior cleaning.</p>
-    </div>
-    <div class="card">
-      <h3>Full Detail</h3>
-      <p>Complete inside and outside transformation.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="section">
-  <h2>My Work</h2>
-  <div class="portfolio">
-
-    <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-      <p>Clean Finish</p>
-    </div>
-
-    <div class="portfolio-item">
-      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c9">
-      <p>Before & After</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Instagram: @yourpage</p>
-  <p>TikTok: @yourpage</p>
-</section>
-
-<footer>
-  <p>© 2026 Auto Detail Pro</p>
-</footer>
+</div>
 
 </body>
 </html>
